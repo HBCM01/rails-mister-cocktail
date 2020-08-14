@@ -1,9 +1,15 @@
 <h1>What's your poison</h1>
 
+<%= form_tag cocktails_path, method: :get do %>
+  <%= label_tag(:search, "What cocktail would you like to make?") %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag("Search", :name => nil) %>
+<% end %>
+
 <ul>
-  <%@cocktails.each do |cocktail|  %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
-  <% end  %>
+  <%@cocktails.each do |cocktail|%>
+  <li><%=link_to cocktail.name, cocktail_path(cocktail)%></li>
+  <%end%>
 </ul>
 
 <li><%= link_to 'create your own cocktail', new_cocktail_path %></li>
