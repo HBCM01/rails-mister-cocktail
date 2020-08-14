@@ -8,6 +8,9 @@
 
 <ul>
   <%@cocktails.each do |cocktail|%>
+  <% if cocktail.photo.attached? %>
+  <%= cl_image_tag cocktail.photo.key %>
+  <% end %>
   <li><%=link_to cocktail.name, cocktail_path(cocktail)%></li>
   <%end%>
 </ul>

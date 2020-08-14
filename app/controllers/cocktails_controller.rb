@@ -4,8 +4,8 @@ class CocktailsController < ApplicationController
   end
 
   def index
-    # @cocktails = Cocktail.all
-    @cocktails = Cocktail.search(params[:search])
+    @cocktails = Cocktail.all
+    # @cocktails = Cocktail.search(params[:search])
   end
 
   def new
@@ -43,7 +43,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :cocktail_id, :search)
+    params.require(:cocktail).permit(:name, :cocktail_id, :search, :photo)
   end
 
   def set_cocktail
