@@ -7,19 +7,22 @@
 <% end %>
 <div class="grid-container">
   <ul>
-    <div class="grid-item">
-      <%@cocktails.each do |cocktail|%>
-        <% if cocktail.photo.attached? %>
+   <%@cocktails.each do |cocktail|%>
+      <% if cocktail.photo.attached? %>
+        <div class="grid-item">
           <div class="card-category" >
             <%= cl_image_tag cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-            <%end %>
+              <% end %>
             <li><%=link_to cocktail.name, cocktail_path(cocktail)%></li>
-          <%end%>
-          </div>
-    </div>
+          <% end %>
+        </div>
+      </div>
   </ul>
 </div>
 
 <button><%= link_to 'create your own cocktail', new_cocktail_path %></button>
 
 
+
+ <!--   <div class="grid-item"> -->
+   <!--  </div> -->
