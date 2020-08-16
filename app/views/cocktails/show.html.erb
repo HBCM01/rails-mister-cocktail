@@ -1,4 +1,8 @@
-<h1><%= @cocktail.name %></h1>
+<div class="show-banner">
+</div>
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+
 
 <ul>
   <% @cocktail.doses.each do |dose| %>
@@ -11,4 +15,4 @@
 <button><%= link_to "add ingredients", new_cocktail_dose_path(@cocktail.id)  %></button>
 <button><%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete,
 data: { confirm: "Are you sure you want to delete this Cocktail?"}%></button>
-
+</div>
