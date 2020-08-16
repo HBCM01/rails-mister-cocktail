@@ -1,10 +1,17 @@
 <h1>What's your poison</h1>
 
+<div class="banner">
 <%= form_tag cocktails_path, method: :get do %>
   <%= label_tag(:search, "What cocktail would you like to make?") %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag("Search", :name => nil) %>
 <% end %>
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+  </div>
+</div>
+
 <div class="grid-container">
   <ul>
    <%@cocktails.each do |cocktail|%>
