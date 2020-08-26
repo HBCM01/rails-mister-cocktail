@@ -1,3 +1,4 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
@@ -6,13 +7,15 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<h1>What's your poison</h1>
 
-<%= form_tag cocktails_path, method: :get do %>
-  <%= label_tag(:search, "") %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag("Search", :name => nil) %>
-<% end %>
+  <h1>What's your poison</h1>
+
+  <%= form_tag cocktails_path, method: :get do %>
+    <%= label_tag(:search, "") %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag("Search", :name => nil) %>
+  <% end %>
+</div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -30,33 +33,43 @@
       </li>
     </ul>
   </div>
-</div>
+
 
 <div class="banner">
 
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <h1>Mister Tipple</h1>
+    <p>Making cocktails <strong>great!</strong></p>
   </div>
   <button class="create-button"><%= link_to 'create your own cocktail', new_cocktail_path %></button>
 </div>
 
-<div class="grid-container">
-  <ul>
-   <%@cocktails.each do |cocktail|%>
+
+
+<div class="cards big-pad">
+  <%@cocktails.each do |cocktail| %>
+
+    <%= link_to cocktail_path(cocktail) do %>
+      <div class="card-trip">
       <% if cocktail.photo.attached? %>
-        <div class="grid-item">
-          <div class="card-category" >
-            <%= cl_image_tag cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-              <% end %>
-            <li><%=link_to cocktail.name, cocktail_path(cocktail)%></li>
-          <% end %>
+        <%=cl_image_tag cocktail.photo.key, height: 300, width: 550, crop: :fill, class:"car_image" %>
+        <% else  %>
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="default car">
+        <% end %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%=cocktail.name %> </h2>
+          </div>
+          <h2 class="card-trip-pricing"></h2>
         </div>
       </div>
-  </ul>
+    <% end %>
+  <% end %>
 </div>
 
 <button><%= link_to 'create your own cocktail', new_cocktail_path %></button>
+
+
 
 
 
