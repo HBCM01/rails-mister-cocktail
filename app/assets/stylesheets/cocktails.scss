@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
-  background: #fff;
+  background: black;
   font-family: "Comfortaa", sans-serif;
   position: relative;
+  text-decoration: none !important;
 }
 
 footer {
@@ -52,6 +53,7 @@ footer a .icons {
 .word,
 h1 {
   cursor: pointer;
+  text-decoration: none;
 }
 
 h1 {
@@ -59,6 +61,7 @@ h1 {
   color: #fff;
   font: 900 60px Montserrat;
   text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 .concept {
@@ -67,6 +70,7 @@ h1 {
   height: 100vh;
   overflow: hidden;
   scroll-snap-align: center;
+  display: center;
 }
 .concept:before {
   content: "";
@@ -85,10 +89,11 @@ h1 {
 
 
 .concept-six {
-  display: flex;
   align-items: center;
-  background-image: url(../images/background-image.jpg);
+  background-image: asset-url("background_image.jpg");
+  background-size: cover;
 }
+
 .concept-six .word {
   width: 550px;
   margin: auto;
@@ -96,43 +101,53 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 80%;
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(1) {
   margin-top: -30px;
   transform: rotate(-20deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(2) {
   margin: -40px 0px 0 10px;
   transform: rotate(5deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(3) {
   margin: 15px 0 0 10px;
   transform: rotate(12deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(4) {
   margin: -25px 0 0;
   transform: rotate(5deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(5) {
   margin: -40px 5px 0;
   transform: rotate(-10deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(6) {
   margin: -15px 5px 0;
   transform: rotate(-10deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(7) {
   margin: -25px 5px 0;
   transform: rotate(-10deg);
+  text-decoration: none;
 }
 .concept-six .word:hover .char:nth-child(8) {
   margin: -40px 5px 0;
   transform: rotate(-10deg);
+  text-decoration: none;
 }
 .concept-six .char {
   flex: 1;
   transition: 0.3s ease-in-out;
   position: relative;
+  text-decoration: none;
 }
 
 
@@ -140,13 +155,16 @@ h1 {
   0% {
     opacity: 0;
     transform: scale(1);
+    text-decoration: none;
   }
   20% {
     opacity: 1;
+    text-decoration: none;
   }
   100% {
     opacity: 0;
     transform: scale(2);
+    text-decoration: none;
   }
 }
 
