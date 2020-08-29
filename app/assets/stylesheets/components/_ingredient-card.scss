@@ -2,7 +2,22 @@
     display: flex;
     border: 1px solid #ececec;
     border-radius: 4px;
-    margin-bottom: 8px;
+    margin: auto;
     padding: 16px;
     color: darkgray;
+    width: fit-content;
+    text-align: center;
+    margin-top: 32px;
+}
+
+.dose-details {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  padding: 8px;
+}
+
+.cocktail-name {
+  text-align: center;
+  margin: 16px;
 }
