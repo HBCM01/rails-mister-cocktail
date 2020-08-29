@@ -47,6 +47,9 @@ footer a .icons {
   position: relative;
   height: 100vh;
   overflow-y: scroll;
+   background-image: asset-url("background_image.jpg");
+  background-size: cover;
+  filter:drop-shadow(8px 8px 10px gray);
 }
 
 .hover,
@@ -90,8 +93,6 @@ h1 {
 
 .concept-six {
   align-items: center;
-  background-image: asset-url("background_image.jpg");
-  background-size: cover;
 }
 
 .concept-six .word {
@@ -102,52 +103,62 @@ h1 {
   justify-content: center;
   height: 80%;
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(1) {
   margin-top: -30px;
   transform: rotate(-20deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(2) {
   margin: -40px 0px 0 10px;
   transform: rotate(5deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(3) {
   margin: 15px 0 0 10px;
   transform: rotate(12deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(4) {
   margin: -25px 0 0;
   transform: rotate(5deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(5) {
   margin: -40px 5px 0;
   transform: rotate(-10deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(6) {
   margin: -15px 5px 0;
   transform: rotate(-10deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(7) {
   margin: -25px 5px 0;
   transform: rotate(-10deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .word:hover .char:nth-child(8) {
   margin: -40px 5px 0;
   transform: rotate(-10deg);
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 .concept-six .char {
   flex: 1;
   transition: 0.3s ease-in-out;
   position: relative;
   text-decoration: none;
+  text-shadow:5px 5px 10px black;
 }
 
 
