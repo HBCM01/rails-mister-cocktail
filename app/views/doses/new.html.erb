@@ -1,10 +1,25 @@
 
 <h1>ingredients</h1>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <!-- Insert form here -->
+<h2>Log in</h2>
+<div class="sign-up">
+
+
 <%= simple_form_for [@cocktail, @dose ] do |f| %>
+<div class="form-inputs" style="color: white;">
   <%= f.association :ingredient%>
   <%= f.input :description %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
-
+</div>
 <button><%= link_to 'back',cocktail_path(@cocktail)  %></button>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
